@@ -2,10 +2,10 @@
 def stock_days(consumption, actual_stock):
 
 	#Check the types of the passed args.
-	#Consumption arg must be of type list and sku of type str | int. Preferably str to avoid problems with SKU's that starts with 0.
+	#Consumption arg must be of type list. Preferably str to avoid problems with SKU's that starts with 0.
 
 	if not isinstance(consumption, list):
-		raise TypeError("consumption quantities must be listed in a list construct")
+		raise TypeError("consumption quantities must be in a list object")
 
 	if not isinstance(actual_stock, int) and not isinstance(actual_stock, float):
 		raise TypeError("actual_stock must be of type int | float")
@@ -43,8 +43,6 @@ def stock_days(consumption, actual_stock):
 		return "+" + str(days_tracker)
 	else:
 		return str(days_tracker)
-
-print(stock_days([100,200,300,650,750], 5000))
 
 
 		
